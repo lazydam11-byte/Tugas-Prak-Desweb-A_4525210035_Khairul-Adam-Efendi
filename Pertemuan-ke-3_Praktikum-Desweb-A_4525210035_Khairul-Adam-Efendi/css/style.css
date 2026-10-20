@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #263247;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    border-top: 5px solid #3b82f6;
+}
+
+h1 {
+    color: #172554;
+    font-size: 32px;
+}
+
+h2 {
+    color: #1d4ed8;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.poppins {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.arial {
+    font-family: Arial, sans-serif;
+}
+
+.color-box {
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.utama {
+    background-color: #172554;
+}
+
+.biru {
+    background-color: #3b82f6;
+}
+
+.ungu {
+    background-color: #8b5cf6;
+}
+
+.cyan {
+    background-color: #06b6d4;
+}
+
+.hijau {
+    background-color: #10b981;
+}
