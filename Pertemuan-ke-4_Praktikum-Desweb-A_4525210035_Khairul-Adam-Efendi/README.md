@@ -25,9 +25,11 @@ Membangun ulang halaman landing page Arunika Studio menjadi dua file (`index.htm
 
 ## Screenshot
 
-| Halaman | Desktop | | Profil |
+| Biodata |
+<img width="1919" height="1079" alt="Screenshot 2026-11-03 074426" src="https://github.com/user-attachments/assets/49d89fda-80a3-49cd-9905-8b018754d0ea" />
 
 | Arunika Studio |
+<img width="1919" height="1079" alt="Screenshot 2026-11-03 074535" src="https://github.com/user-attachments/assets/ed265bb8-6c7b-4499-bda8-d712f35d15c1" />
 
 ## Ringkasan Perubahan, Masalah, dan Solusi
 
