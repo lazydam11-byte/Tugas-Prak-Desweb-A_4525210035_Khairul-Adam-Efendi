@@ -1,0 +1,238 @@
+/* ==========================================================
+   Arunika Studio - style.css
+   Semua perbaikan dilakukan di CSS saja (HTML tidak diubah).
+   Palet Kobo Kanaeru (ditulis langsung, tanpa :root):
+   Navy       #1B2A4A  -> header, footer, judul, tombol
+   Sky Blue   #5BC8F5  -> aksen, border, hover
+   Ocean Blue #2A7FB8  -> hover tombol
+   Pale Cyan  #EAF7FD  -> background halaman
+   Rain Gray  #4A6A8A  -> subjudul
+   Text       #2B3A55  -> teks isi
+   Sun Yellow #FFD966  -> latar logo
+   ========================================================== */
+
+/* ===== Reset & box model ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* width sudah termasuk padding + border */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2B3A55;
+    background-color: #EAF7FD;
+}
+
+/* gambar tidak pernah melebihi wadahnya */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Class reusable ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #1B2A4A;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background-color: #2A7FB8;
+}
+
+.card {
+    width: 31%;
+    margin: 1%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #5BC8F5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card h3 {
+    color: #1B2A4A;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card .button {
+    margin-top: auto;
+    /* tombol rata di bawah kartu */
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #1B2A4A;
+    color: white;
+    padding: 20px 0;
+    border-bottom: 4px solid #5BC8F5;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #5BC8F5;
+}
+
+/* ===== Hero ===== */
+#hero {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    color: #1B2A4A;
+}
+
+.hero-text h3 {
+    font-size: 22px;
+    color: #4A6A8A;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    width: 35%;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    margin: auto;
+    background-color: #FFD966;
+    border: 6px solid #5BC8F5;
+    border-radius: 50%;
+}
+
+/* ===== Layanan ===== */
+.section h2 {
+    text-align: center;
+    color: #1B2A4A;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.section-desc {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #1B2A4A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #5BC8F5;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #5BC8F5;
+}
+
+/* ===== Responsive: layar di bawah 768px ===== */
+@media (max-width: 767px) {
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* tiga card menjadi satu kolom */
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

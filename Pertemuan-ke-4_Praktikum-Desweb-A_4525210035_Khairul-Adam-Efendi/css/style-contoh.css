@@ -1,0 +1,248 @@
+:root {
+    --navy: #1B2A4A;
+    --sky: #5BC8F5;
+    --ocean: #2A7FB8;
+    --pale: #EAF7FD;
+    --muted: #4A6A8A;
+    --text: #2B3A55;
+    --sun: #FFD966;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--pale);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--navy);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background-color: var(--ocean);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-image {
+    width: 35%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    border: 6px solid var(--sky);
+}
+
+.project-card {
+    width: 31%;
+    margin: 1%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid var(--sky);
+}
+
+.project-card img {
+    width: 280px;
+    max-width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: var(--navy);
+    color: white;
+    padding: 20px 0;
+    border-bottom: 4px solid var(--sky);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--sky);
+}
+
+#hero {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    color: var(--navy);
+}
+
+.hero-text h3 {
+    font-size: 22px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+}
+
+.hero-sun {
+    width: 280px;
+    height: 280px;
+    background-color: var(--sun);
+    border: 6px solid var(--navy);
+    border-radius: 50%;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.section-desc {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#tentang p,
+#kontak p {
+    text-align: center;
+}
+
+#kontak a {
+    color: var(--ocean);
+    font-weight: bold;
+}
+
+#kontak a:hover {
+    color: var(--navy);
+}
+
+footer {
+    background-color: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid var(--sky);
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 200px;
+    }
+}
