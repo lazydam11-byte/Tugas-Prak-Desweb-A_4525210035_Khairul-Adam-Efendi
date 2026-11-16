@@ -1,8 +1,8 @@
 # Tugas Praktikum Pertemuan 4 - Desain Web
 
-**Nama:** Khairul Adam Efendi
-**NPM:** 4525210035
-**Kelas:** A
+**Nama:** Khairul Adam Efendi  
+**NPM:** 4525210035  
+**Kelas:** A  
 
 # Selaras Coffee — One Page Website
 
