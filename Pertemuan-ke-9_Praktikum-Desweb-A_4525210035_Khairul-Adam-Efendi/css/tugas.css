@@ -1,0 +1,71 @@
+body {
+    background-color: #EEF8FB;
+    color: #1B2A49;
+}
+
+.site-header {
+    background-color: #1B2A49;
+    color: #FFFFFF;
+    border-bottom: 4px solid #3EC5D8;
+}
+
+.site-header p {
+    color: #A9DCEA;
+}
+
+.section-title {
+    color: #1B2A49;
+    font-weight: 700;
+}
+
+.section-desc {
+    color: #4F6A8A;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #CDE9F1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(27, 42, 73, 0.18);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    background-color: #D6EFF6;
+}
+
+.card-title {
+    color: #1B2A49;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #4F6A8A;
+}
+
+.btn-primary {
+    background-color: #3EC5D8;
+    border-color: #3EC5D8;
+    color: #12203B;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #1B2A49;
+    border-color: #1B2A49;
+    color: #FFFFFF;
+}
+
+.site-footer {
+    background-color: #12203B;
+    color: #A9DCEA;
+}

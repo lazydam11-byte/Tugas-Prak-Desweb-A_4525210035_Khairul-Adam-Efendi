@@ -1,0 +1,383 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #493629;
+    background-color: #FAF6F1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #493629;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: #E8D8C5;
+    font-size: 23px;
+}
+
+.navbar-brand:hover {
+    color: #C9A889;
+}
+
+.nav-link {
+    color: #F2E8DC;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #C9A889;
+}
+
+/* Hero */
+.hero-section {
+    background: linear-gradient(135deg, #493629, #8A5F41);
+    color: #FAF6F1;
+    padding: 80px 0 40px;
+}
+
+.hero-label {
+    color: #C9A889;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-title {
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero-title span {
+    color: #D8B99A;
+}
+
+.hero-description {
+    color: #E8D8C5;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 430px;
+    height: 430px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 45% 45% 20px 20px;
+    border: 8px solid rgba(232, 216, 197, 0.2);
+}
+
+/* Button */
+.btn-main {
+    background-color: #C9A889;
+    color: #493629;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-main:hover,
+.btn.btn-main:active,
+.btn.btn-main:focus-visible {
+    background-color: #E8D8C5;
+    color: #493629;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+}
+
+/* General Section */
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-label {
+    color: #7A5236;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #493629;
+}
+
+.section-title span {
+    color: #8A5F41;
+}
+
+.section-description {
+    color: #6B5747;
+    line-height: 1.8;
+}
+
+/* About */
+.about-section {
+    background-color: #FAF6F1;
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.about-number {
+    color: #8A5F41;
+    font-weight: 800;
+}
+
+/* Menu */
+.menu-section {
+    background-color: #EDE3D8;
+}
+
+.product-card {
+    border: 1px solid #E3D2C1;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #FAF6F1;
+    box-shadow: 0 8px 25px rgba(73, 54, 41, 0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(73, 54, 41, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 25px;
+}
+
+.product-category {
+    color: #8A5F41;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.product-card .card-title {
+    color: #493629;
+    font-weight: bold;
+}
+
+.product-card .card-text {
+    color: #6B5747;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.product-price {
+    color: #8A5F41;
+    font-weight: bold;
+}
+
+/* Promotion */
+.promo-section {
+    padding-top: 55px;
+    background-color: #FAF6F1;
+}
+
+.promo-alert {
+    background-color: #E8D8C5;
+    border: 1px solid #C9A889;
+    color: #493629;
+    padding: 22px;
+    border-radius: 15px;
+}
+
+.promo-alert .bi {
+    color: #8A5F41;
+}
+
+/* Modal */
+#promoModal .modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FAF6F1;
+}
+
+#promoModal .modal-header {
+    background-color: #493629;
+    color: #FAF6F1;
+    border-bottom: none;
+}
+
+#promoModal .btn-close {
+    filter: invert(1);
+}
+
+#promoModal .modal-body .bi {
+    color: #8A5F41;
+}
+
+#promoModal .modal-body h3 {
+    color: #8A5F41;
+    font-weight: 800;
+}
+
+#promoModal .modal-footer {
+    border-top: 1px solid #E3D2C1;
+}
+
+/* Contact */
+.contact-section {
+    background-color: #EDE3D8;
+}
+
+#contactForm {
+    background-color: #FAF6F1;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(73, 54, 41, 0.08);
+}
+
+.form-label {
+    color: #493629;
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #D8C5B2;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #FFFFFF;
+}
+
+.form-control:focus {
+    border-color: #8A5F41;
+    box-shadow: 0 0 0 0.2rem rgba(138, 95, 65, 0.2);
+}
+
+#formAlert .alert-success {
+    background-color: #E8D8C5;
+    border: 1px solid #C9A889;
+    color: #493629;
+    border-radius: 15px;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #493629;
+    color: #F2E8DC;
+    padding: 65px 0 25px;
+}
+
+.footer-section h4 {
+    color: #E8D8C5;
+}
+
+.footer-section h5 {
+    color: #C9A889;
+    font-size: 17px;
+}
+
+.footer-section p {
+    color: #D8C5B2;
+    line-height: 1.8;
+}
+
+.footer-section .bi {
+    color: #C9A889;
+}
+
+.footer-tagline {
+    color: #C9A889 !important;
+    font-style: italic;
+}
+
+.footer-section li {
+    margin-bottom: 12px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #D8C5B2;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #E8D8C5;
+}
+
+.footer-section hr {
+    border-color: #806B5B;
+    opacity: 1;
+    margin: 35px 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        height: 350px;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .hero-image {
+        height: 280px;
+        max-width: 280px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    #contactForm {
+        padding: 22px;
+    }
+
+    .promo-alert {
+        font-size: 14px;
+    }
+}
