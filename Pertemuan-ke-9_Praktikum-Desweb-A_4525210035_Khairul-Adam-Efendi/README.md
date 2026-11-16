@@ -1,3 +1,9 @@
+# Tugas Praktikum Pertemuan 4 - Desain Web
+
+**Nama:** Khairul Adam Efendi
+**NPM:** 4525210035
+**Kelas:** A
+
 # Selaras Coffee — One Page Website
 
 Website company profile satu halaman untuk **Selaras Coffee**, UMKM kedai kopi dengan konsep *Coffee, Cats, and Comfort*. Website ini disiapkan agar dapat dipresentasikan kepada calon pelanggan dan mitra bisnis, dibangun dengan **Bootstrap 5** dan diberi identitas sendiri lewat custom CSS.
