@@ -13,7 +13,7 @@ Pengerjaan berawal dari file contoh praktikum **`contoh1.html`** dan **`contoh1.
 ## Struktur Proyek
 
 ```
-selaras-coffee/
+Pertemuan-ke-9_Praktikum-Desweb-A_4525210035_Khairul-Adam-Efendi/
 ├── index.html
 ├── css/
 │   └── style.css
