@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrasi Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="side">
+            <h1>Registrasi Event</h1>
+            <p>Isi formulir untuk mengamankan tempatmu. Kolom bertanda * wajib diisi.</p>
+            <div class="siapkan">
+                <h2>Yang perlu disiapkan</h2>
+                <ul>
+                    <li>Email dan nomor HP aktif</li>
+                    <li>Foto atau scan kartu identitas</li>
+                    <li>Format JPG, PNG, atau PDF, maksimal 2 MB</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main">
+            <form id="formRegistrasi" novalidate>
+
+                <fieldset class="group">
+                    <legend>Data diri</legend>
+
+                    <div class="field">
+                        <label for="nama">Nama lengkap *</label>
+                        <input type="text" id="nama" name="nama" maxlength="50" autocomplete="name"
+                            aria-describedby="err-nama">
+                        <small class="error" id="err-nama"></small>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="nama@contoh.com"
+                                autocomplete="email" aria-describedby="err-email">
+                            <small class="error" id="err-email"></small>
+                        </div>
+                        <div class="field">
+                            <label for="hp">Nomor HP *</label>
+                            <input type="tel" id="hp" name="hp" placeholder="081234567890" autocomplete="tel"
+                                aria-describedby="err-hp">
+                            <small class="error" id="err-hp"></small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="group">
+                    <legend>Tiket dan sesi</legend>
+
+                    <div class="field" role="radiogroup" aria-labelledby="lbl-tiket">
+                        <span class="label" id="lbl-tiket">Jenis tiket *</span>
+                        <div class="opsi">
+                            <label class="pilihan"><input type="radio" name="tiket" value="umum"> Umum</label>
+                            <label class="pilihan"><input type="radio" name="tiket" value="pelajar"> Pelajar /
+                                Mahasiswa</label>
+                        </div>
+                        <small class="error" id="err-tiket"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="sesi">Pilih sesi *</label>
+                        <select id="sesi" name="sesi" aria-describedby="err-sesi">
+                            <option value="">Pilih sesi</option>
+                            <option value="pagi">Pagi (09.00 - 12.00)</option>
+                            <option value="siang">Siang (13.00 - 16.00)</option>
+                        </select>
+                        <small class="error" id="err-sesi"></small>
+                    </div>
+                </fieldset>
+
+                <fieldset class="group">
+                    <legend>Kebutuhan khusus <span class="opsional">(opsional)</span></legend>
+                    <div class="opsi">
+                        <label class="pilihan"><input type="checkbox" name="kebutuhan" value="kursi-roda"> Akses kursi
+                            roda</label>
+                        <label class="pilihan"><input type="checkbox" name="kebutuhan" value="isyarat"> Juru bahasa
+                            isyarat</label>
+                        <label class="pilihan"><input type="checkbox" name="kebutuhan" value="materi-khusus"> Materi
+                            huruf besar / braille</label>
+                        <label class="pilihan"><input type="checkbox" name="kebutuhan" value="pendamping">
+                            Pendamping</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="group">
+                    <legend>Lainnya</legend>
+
+                    <div class="field">
+                        <label for="alasan">Alasan mengikuti event *</label>
+                        <textarea id="alasan" name="alasan" rows="4" maxlength="200"
+                            placeholder="10 sampai 200 karakter" aria-describedby="err-alasan"></textarea>
+                        <small class="error" id="err-alasan"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="bukti">Bukti identitas *</label>
+                        <input type="file" id="bukti" name="bukti" accept=".jpg,.jpeg,.png,.pdf"
+                            aria-describedby="err-bukti">
+                        <small class="error" id="err-bukti"></small>
+                    </div>
+                </fieldset>
+
+                <div class="field setuju">
+                    <label class="pilihan"><input type="checkbox" name="setuju" aria-describedby="err-setuju"> Saya
+                        menyetujui syarat dan ketentuan event *</label>
+                    <small class="error" id="err-setuju"></small>
+                </div>
+
+                <button type="submit">Daftar sekarang</button>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        const form = document.getElementById("formRegistrasi");
+
+        function validasi() {
+            const err = {};
+            const v = n => form.elements[n].value.trim();
+            const file = form.elements.bukti.files[0];
+
+            if (v("nama").length < 3) err.nama = "Nama minimal 3 karakter.";
+            else if (!/^[A-Za-z\s.']+$/.test(v("nama"))) err.nama = "Nama hanya boleh berisi huruf, spasi, titik, atau apostrof.";
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v("email"))) err.email = "Masukkan email dengan format yang benar, misalnya nama@contoh.com.";
+
+            if (!/^08[0-9]{8,11}$/.test(v("hp"))) err.hp = "Nomor HP harus diawali 08 dan terdiri dari 10-13 digit angka.";
+
+            if (!form.querySelector('input[name="tiket"]:checked')) err.tiket = "Pilih salah satu jenis tiket.";
+
+            if (!v("sesi")) err.sesi = "Pilih sesi yang ingin diikuti.";
+
+            if (v("alasan").length < 10) err.alasan = "Alasan minimal 10 karakter.";
+
+            if (!file) err.bukti = "Unggah bukti identitas.";
+            else if (!["image/jpeg", "image/png", "application/pdf"].includes(file.type)) err.bukti = "Format file harus JPG, PNG, atau PDF.";
+            else if (file.size > 2 * 1024 * 1024) err.bukti = "Ukuran file maksimal 2 MB.";
+
+            if (!form.elements.setuju.checked) err.setuju = "Centang persetujuan untuk melanjutkan.";
+
+            return err;
+        }
+
+        function bersihkan(key) {
+            const pesan = document.getElementById("err-" + key);
+            if (!pesan) return;
+            pesan.textContent = "";
+            pesan.closest(".field").classList.remove("invalid");
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.querySelectorAll(".error").forEach(el => { el.textContent = ""; el.closest(".field").classList.remove("invalid"); });
+
+            const err = validasi();
+            const keys = Object.keys(err);
+
+            keys.forEach(k => {
+                const pesan = document.getElementById("err-" + k);
+                pesan.textContent = err[k];
+                pesan.closest(".field").classList.add("invalid");
+            });
+
+            if (keys.length) {
+                const pertama = form.querySelector(".invalid input, .invalid select, .invalid textarea");
+                if (pertama) pertama.focus();
+                return;
+            }
+
+            alert("Form berhasil dikirim! Ini hanya tampilan, data tidak disimpan.");
+            form.reset();
+        });
+
+        // Hapus pesan error saat pengguna mulai memperbaiki isian
+        ["input", "change"].forEach(ev => form.addEventListener(ev, e => bersihkan(e.target.name)));
+    </script>
+</body>
+
+</html>

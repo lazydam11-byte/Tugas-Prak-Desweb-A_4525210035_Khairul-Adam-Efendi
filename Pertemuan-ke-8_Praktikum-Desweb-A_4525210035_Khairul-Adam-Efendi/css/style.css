@@ -1,0 +1,276 @@
+/* Palet terinspirasi Kobo Kanaeru (interpretasi tidak resmi): navy malam hujan, cyan, aqua muda, kuning payung */
+:root {
+    --navy: #0f2a4a;
+    --navy-2: #173b66;
+    --cyan: #14a9cf;
+    --cyan-dark: #0b7fa0;
+    --aqua: #e6f7fb;
+    --aqua-line: #b9e4ee;
+    --kuning: #ffd45c;
+    --teks: #14263d;
+    --redam: #4c6177;
+    --error: #c0334d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Figtree", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--teks);
+    background: var(--aqua);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    min-height: 100vh;
+}
+
+/* Panel kiri: garis hujan diagonal sebagai satu-satunya dekorasi */
+.side {
+    padding: 48px 36px;
+    color: #fff;
+    background:
+        repeating-linear-gradient(115deg, rgba(20, 169, 207, .16) 0 2px, transparent 2px 26px),
+        var(--navy);
+    border-right: 6px solid var(--kuning);
+}
+
+.side h1 {
+    margin: 0 0 12px;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.side p {
+    margin: 0 0 32px;
+    color: #cfe6f2;
+}
+
+.siapkan h2 {
+    margin: 0 0 8px;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-size: 1.05rem;
+    color: var(--kuning);
+}
+
+.siapkan ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #e3f1f8;
+}
+
+.siapkan li {
+    margin-bottom: 4px;
+}
+
+.main {
+    padding: 40px 24px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    max-width: 560px;
+}
+
+.group {
+    margin: 0 0 20px;
+    padding: 20px 22px 6px;
+    background: #fff;
+    border: 1px solid var(--aqua-line);
+    border-left: 4px solid var(--cyan);
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 8px;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--navy);
+}
+
+.opsional {
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    color: var(--redam);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+label,
+.label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--teks);
+    background: #fff;
+    border: 1.5px solid #8fb3c4;
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    width: 100%;
+    font: inherit;
+    font-size: .9rem;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 10px;
+    padding: 7px 12px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--navy-2);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.opsi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin-bottom: 16px;
+}
+
+.pilihan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 8px 12px;
+    font-weight: 500;
+    background: var(--aqua);
+    border: 1px solid var(--aqua-line);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pilihan input {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: var(--cyan-dark);
+}
+
+.setuju {
+    margin: 0 0 20px;
+}
+
+.setuju .pilihan {
+    background: transparent;
+    border-color: transparent;
+    padding-left: 0;
+}
+
+.error {
+    display: block;
+    min-height: 0;
+    margin-top: 4px;
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--error);
+}
+
+.invalid input[type="text"],
+.invalid input[type="email"],
+.invalid input[type="tel"],
+.invalid select,
+.invalid textarea {
+    border-color: var(--error);
+    background: #fff7f8;
+}
+
+.invalid .opsi {
+    outline: 2px solid var(--error);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--kuning);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--navy);
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--navy);
+    background: var(--kuning);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffc933;
+}
+
+@media (max-width: 800px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .side {
+        padding: 32px 24px;
+        border-right: 0;
+        border-bottom: 6px solid var(--kuning);
+    }
+
+    .side h1 {
+        font-size: 2rem;
+    }
+
+    .side p {
+        margin-bottom: 20px;
+    }
+
+    .main {
+        padding: 24px 14px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
