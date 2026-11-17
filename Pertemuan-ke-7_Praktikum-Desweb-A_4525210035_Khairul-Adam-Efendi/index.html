@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <header class="page-header">
+            <h1>Portal Formulir Pendaftaran</h1>
+            <p>Pilih formulir sesuai kebutuhan pendaftaran kursus atau penerimaan mahasiswa baru.</p>
+        </header>
+
+        <div class="grid-forms">
+            <!-- FORM 1: PENDAFTARAN KURSUS -->
+            <section class="form-card">
+                <div class="card-top">
+                    <span class="badge">Bagian 01</span>
+                    <h2>Pendaftaran Kursus</h2>
+                </div>
+
+                <form id="formKursus" method="POST">
+                    <div class="field">
+                        <label for="kursusNama">Nama Lengkap</label>
+                        <input type="text" id="kursusNama" name="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="kursusEmail">Email</label>
+                        <input type="email" id="kursusEmail" name="email" placeholder="peserta@contoh.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="kursusPassword">Password</label>
+                        <input type="password" id="kursusPassword" name="password" minlength="8"
+                            placeholder="Minimal 8 karakter" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="kursusUsia">Usia</label>
+                        <input type="number" id="kursusUsia" name="usia" min="10" max="99" placeholder="Contoh: 20"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="kursusTanggal">Tanggal Mulai Belajar</label>
+                        <input type="date" id="kursusTanggal" name="tanggal_mulai" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="kursusJalur">Jalur Kursus</label>
+                        <select id="kursusJalur" name="jalur_kursus" required>
+                            <option value="">-- Pilih Jalur --</option>
+                            <option value="english">Bahasa Inggris</option>
+                            <option value="math">Matematika</option>
+                            <option value="computer">Komputer</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <span class="group-label">Mode Kelas</span>
+                        <div class="option-row">
+                            <input type="radio" id="modeOnline" name="mode_kelas" value="online" required>
+                            <label for="modeOnline">Online</label>
+
+                            <input type="radio" id="modeHybrid" name="mode_kelas" value="hybrid">
+                            <label for="modeHybrid">Hybrid</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <span class="group-label">Tambahan Materi</span>
+                        <div class="option-row">
+                            <input type="checkbox" id="cekSilabus" name="tambahan[]" value="silabus">
+                            <label for="cekSilabus">Silabus PDF</label>
+
+                            <input type="checkbox" id="cekSertifikat" name="tambahan[]" value="sertifikat">
+                            <label for="cekSertifikat">Sertifikat</label>
+                        </div>
+                    </div>
+
+                    <div class="action-bar">
+                        <button type="submit" class="btn primary">Kirim Pendaftaran</button>
+                        <button type="reset" class="btn secondary">Reset</button>
+                        <button type="button" class="btn ghost"
+                            data-info="Periksa kembali email dan tanggal mulai sebelum mengirim.">Bantuan</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- FORM 2: PENERIMAAN MAHASISWA BARU (STUDI KASUS) -->
+            <section class="form-card">
+                <div class="card-top">
+                    <span class="badge">Bagian 02</span>
+                    <h2>Penerimaan Mahasiswa Baru</h2>
+                </div>
+
+                <form id="formPMB" method="POST">
+                    <div class="field">
+                        <label for="pmbNama">Nama Lengkap</label>
+                        <input type="text" id="pmbNama" name="nama_lengkap" placeholder="Sesuai ijazah / KTP" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="pmbEmail">Email</label>
+                        <input type="email" id="pmbEmail" name="email" placeholder="person@gmail.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="pmbPassword">Password</label>
+                        <input type="password" id="pmbPassword" name="password" minlength="8"
+                            placeholder="Minimal 8 karakter" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="pmbNilai">Nilai Rata-Rata</label>
+                        <input type="number" id="pmbNilai" name="nilai_rata_rata" min="0" max="100" step="0.01"
+                            placeholder="Contoh: 87.50" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="pmbTanggalLahir">Tanggal Lahir</label>
+                        <input type="date" id="pmbTanggalLahir" name="tanggal_lahir" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="pmbProdi">Program Studi Pilihan</label>
+                        <select id="pmbProdi" name="program_studi" required>
+                            <option value="">-- Pilih Program Studi --</option>
+                            <option value="teknik_informatika">Teknik Informatika</option>
+                            <option value="teknik_mesin">Teknik Mesin</option>
+                            <option value="teknik_elektro">Teknik Elektro</option>
+                            <option value="teknik_industri">Teknik Industri</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <span class="group-label">Jalur Seleksi</span>
+                        <div class="option-row">
+                            <input type="radio" id="jalurRapor" name="jalur_seleksi" value="rapor" required>
+                            <label for="jalurRapor">Nilai Rapor</label>
+
+                            <input type="radio" id="jalurTes" name="jalur_seleksi" value="tes">
+                            <label for="jalurTes">Tes Masuk</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="option-row">
+                            <input type="checkbox" id="pmbPernyataan" name="persetujuan_data" value="setuju" required>
+                            <label for="pmbPernyataan">Saya menyatakan data yang diisi benar untuk keperluan seleksi
+                                PMB.</label>
+                        </div>
+                    </div>
+
+                    <div class="action-bar">
+                        <button type="submit" class="btn primary">Submit PMB</button>
+                        <button type="reset" class="btn secondary">Reset</button>
+                        <button type="button" class="btn ghost"
+                            data-info="Data nama, email, password, nilai, dan tanggal lahir akan dikirim ke endpoint backend.">Bantuan</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll("form").forEach(function (form) {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Form berhasil diperiksa! Ini hanya tampilan, data tidak disimpan.");
+            });
+        });
+    </script>
+</body>
+
+</html>
